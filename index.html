@@ -144,6 +144,44 @@
             padding: 100px 10%;
             text-align: center;
         }
+        /* تنسيق قسم الأسئلة */
+.faq-section { 
+    padding: 80px 10%; 
+    background: rgba(0,0,0,0.2); 
+}
+
+.faq-container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+details { 
+    background: rgba(22, 27, 34, 0.8); 
+    border: 1px solid rgba(255,255,255,0.05); 
+    border-radius: 15px; 
+    margin-bottom: 15px; 
+    padding: 15px; 
+    cursor: pointer; 
+}
+
+summary { 
+    font-weight: 700; 
+    color: #f0f6fc; 
+    list-style: none; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+/* إضافة علامة الزائد والناقص */
+summary::after { content: '＋'; color: #58a6ff; }
+details[open] summary::after { content: '－'; }
+
+details p { 
+    margin-top: 15px; 
+    color: #8b949e; 
+    line-height: 1.6; 
+}
+
 
         .tech-stack h2 {
             font-size: 2.5rem;
@@ -188,6 +226,65 @@
             transform: translateY(-8px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.3);
         }
+        .share-section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.share-card {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.share-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.share-card p {
+    color: #8b949e;
+    margin-bottom: 30px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.share-btn {
+    padding: 12px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/* ألوان المنصات */
+.whatsapp { background-color: #25d366; }
+.telegram { background-color: #0088cc; }
+.facebook { background-color: #1877f2; }
+
+.share-btn:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 480px) {
+    .share-btn { width: 100%; justify-content: center; }
+}
+
 
 
         /* أيقونات Font Awesome */
@@ -291,7 +388,7 @@
 
     <section class="hero">
         <div class="hero-text">
-            <h1>انضم إلى جيل <span>القوة والعفة</span></h1>
+            <h1> خليك راجل 💪<span>واستعن بالله🤗</span></h1>
             <p>
                 تطبيق THE KILLER SALAFI ليس مجرد أداة حظر، بل هو رفيقك لبناء إرادة حديدية. احمِ نفسك من سموم الإنترنت واستعد تركيزك الآن.
             </p>
@@ -385,7 +482,7 @@
                     <body>
                         <div id="welcome-screen">
                             <div class="preview-box">
-                                <img src="./IMG-20260217-WA0033.jpg" alt="logo">
+                                <img src="/IMG-20260217-WA0033.jpg" alt="logo">
                             </div>
                             <h1 id="t-welcome">مرحباً بك في <br>the killer salafi! 👋</h1>
                             <p id="t-desc">فرض حماية قسرية علي النظام لمنع أي محتوي إباحي عايزينك راجل كدة تعرف لله قدره</p>
@@ -397,6 +494,30 @@
             </div>
         </div>
     </section>
+    <section class="share-section">
+    <div class="share-card">
+        <h3>شارك التطبيق وكن سبباً في التغيير 🌿</h3>
+        <p>قال رسول الله ﷺ: "مَن دلَّ على خيرٍ فله مثلُ أجرِ فاعلِه"</p>
+        
+        <div class="share-buttons">
+            <a href="https://api.whatsapp.com/send?text=أرشح لك تطبيق THE KILLER SALAFI لحماية نفسك وبناء إرادة حديدية: [ضع_رابط_موقعك_هنا]" target="_blank" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                واتساب
+            </a>
+
+            <a href="https://t.me/share/url?url=[ضع_رابط_موقعك_هنا]&text=تطبيق THE KILLER SALAFI لحماية الهاتف من المحتوى الضار" target="_blank" class="share-btn telegram">
+                <i class="fab fa-telegram-plane"></i>
+                تيليجرام
+            </a>
+
+            <a href="https://www.facebook.com/sharer/sharer.php?u=[ضع_رابط_موقعك_هنا]" target="_blank" class="share-btn facebook">
+                <i class="fab fa-facebook-f"></i>
+                فيسبوك
+            </a>
+        </div>
+    </div>
+</section>
+
 
     <section class="features">
         <div class="card">
@@ -415,26 +536,7 @@
             <p>هدفنا الإصلاح وليس الربح، التطبيق متاح للجميع مجاناً وبدون إعلانات.</p>
         </div>
     </section>
-    <section class="stats-preview-section">
-    <h2 style="text-align: center; font-weight: 900; font-size: 2.5rem; margin-bottom: 40px;">
-        نظام <span>الإحصائيات</span> والتحليل
-    </h2>
-    
-    <div class="dashboard-window">
-        <div class="window-bar">
-            <div class="dot red"></div>
-            <div class="dot yellow"></div>
-            <div class="dot green"></div>
-            <span style="margin-right: 15px; font-size: 0.8rem; color: #8b949e;">Statistics-view</span>
-        </div>
-        
-        <div class="iframe-container">
-            <iframe src="https://abdultowabomar-ux.github.io/Statistics-dashboard-/" title="Statistics Dashboard"></iframe>
-        </div>
-    </div>
-</section>
-
-
+   
     <section class="tech-stack">
         <h2>بُني بـ <span>أحدث التقنيات</span></h2>
         <div class="tech-icons">
@@ -512,11 +614,38 @@
             </iframe>
         </div>
     </div>
+    </section>
+<section class="faq-section">
+    <h2 class="section-title">أسئلة <span>شائعة</span></h2>
+    <div class="faq-container">
+        <details>
+            <summary>هل التطبيق مجاني بالكامل؟</summary>
+            <p>نعم، التطبيق مشروع غير ربحي هدفه الإصلاح فقط، ولا يحتوي على إعلانات.</p>
+        </details>
+
+        <details>
+            <summary>لماذا يطلب صلاحيات قوية؟</summary>
+            <p>لضمان نظام حماية لا يمكن الالتفاف عليه بسهولة، مما يساعدك في لحظات الضعف.</p>
+        </details>
+    </div>
+</section>
+<section style="padding: 60px 10%; background: linear-gradient(to bottom, transparent, rgba(88, 166, 255, 0.05));">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+        
+        <div style="flex: 2; min-width: 300px;">
+            <h2 style="color: var(--primary); font-weight: 900;">لماذا <span style="color:#fff;">THE KILLER SALAFI؟</span></h2>
+            <p style="color: #8b949e; line-height: 1.8; font-size: 1.1rem;">
+                في زمنٍ كثرت فيه الفتن، أردنا أن نضع بين يديك سلاحاً تقنياً يعينك على نفسك. لم نصنع هذا التطبيق للربح، بل لنكون يداً واحدة في بناء جيلٍ يعتز بعفته وقوته. تذكر دائماً أن البداية تبدأ بقرار، والتطبيق مجرد وسيلة.
+            </p>
+        </div>
+
+        
+
 
     <div style="background: rgba(22, 27, 34, 0.5); padding: 50px 20px; border-radius: 40px; border: 2px dashed rgba(88, 166, 255, 0.2); max-width: 700px; margin: 0 auto;">
-        <h3 style="margin-bottom: 25px; font-weight: 900; font-size: 1.8rem;">جاهز لبدء حياة جديدة؟</h3>
+        <h3 style="margin-bottom: 25px; font-weight: 900; font-size: 1.8rem;"> اضغط للتحميل</h3>
         
-        <a href="TheSalafikiller.apk" download="TheKillerSalafi.apk" class="btn-main" style="padding: 22px 50px; font-size: 1.5rem; display: inline-flex; align-items: center; gap: 20px;">
+        <a href="https://رابط_ملف_التحميل.apk" download="TheKillerSalafi.apk" class="btn-main" style="padding: 22px 50px; font-size: 1.5rem; display: inline-flex; align-items: center; gap: 20px;">
             <i class="fas fa-file-download"></i>
             تحميل APK مباشر
         </a>
@@ -527,7 +656,6 @@
         </div>
     </div>
 
-</section>
 
 
 
@@ -538,4 +666,3 @@
 
 </body>
 </html>
-
